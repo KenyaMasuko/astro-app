@@ -4,7 +4,7 @@ export const Todo = () => {
 const todos = [
   { id: 1, title: 'foo', isDone: false},
   { id: 2, title: 'bar', isDone: false},
-  { id: 3, title: 'baz', isDone: false}
+  { id: 3, title: 'バズ', isDone: false}
 ]
   const [count, setCount] = useState(0);
   const up = () => {
