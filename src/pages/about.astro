@@ -1,5 +1,7 @@
 ---
 // コードフェンスで囲ってあるこの場所にJSを記述する
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
 import '../styles/global.css';
 
 const pageTitle = 'About Me'
@@ -25,8 +27,10 @@ const textCase = 'uppercase';
 
 <html lang="en">
   <head>
-    <meta charset ="utf-8" />
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
     <style define:vars={{skillColor, fontWeight, textCase}}>
       h1 {
@@ -40,10 +44,8 @@ const textCase = 'uppercase';
       }
     </style>
   </head>
-
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog">Blog</a>
+  <body>
+    <Header />
     <h1>{pageTitle}</h1>
     <h2>... and my new Astro site!</h2>
 
@@ -68,4 +70,7 @@ const textCase = 'uppercase';
     {finished && <p>I finished this tutorial!</p>}
 
     {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+    <Footer />
+    <script src="../scripts/menu.js"></script>
+  </body>
 </html>
